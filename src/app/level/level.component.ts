@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-navigation',
+  selector: 'app-level',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.css'
+  templateUrl: './level.component.html',
+  styleUrl: './level.component.css'
 })
-export class NavigationComponent {
+export class LevelComponent {
 
 }
