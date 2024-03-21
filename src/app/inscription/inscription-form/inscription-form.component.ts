@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, DoCheck, EventEmitter, OnChanges, SimpleChanges, inject } from '@angular/core';
 
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -30,27 +30,41 @@ import { listGenre } from '../constants';
     MatDatepickerModule
   ]
 })
-export class InscriptionFormComponent {
+export class InscriptionFormComponent implements OnChanges {
+
+  isFormValidEvent = new EventEmitter<boolean>();
+
+
+
   private fb = inject(FormBuilder);
   inscriptionForm = this.fb.group({
-    company: null,
     firstName: [null, Validators.required],
     lastName: [null, Validators.required],
-    address: [null, Validators.required],
-    birthDay: [null, Validators.required],
+    /*birthDay: [null, Validators.required],
     genre: [null, Validators.required],
-    address2: null,
+    fatherFirstName: [null, Validators.required],
+    fatherLastName: [null, Validators.required],
+    fatherBirthDay: [null, Validators.required],
+    fatherPhoneNumber: [null, Validators.required],
+    motherrFirstName: [null, Validators.required],
+    motherLastName: [null, Validators.required],
+    motherPhoneNumber: [null, Validators.required],
     city: [null, Validators.required],
     state: [null, Validators.required],
     postalCode: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(5)])
     ],
-    shipping: ['free', Validators.required]
+    shipping: ['free', Validators.required]*/
   });
 
   genreList = listGenre;
 
   hasUnitNumber = false;
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log("something change...");
+  }
+  
 
   states = [
     {name: 'Alabama', abbreviation: 'AL'},

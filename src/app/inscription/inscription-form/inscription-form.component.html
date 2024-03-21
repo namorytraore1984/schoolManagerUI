@@ -22,7 +22,7 @@
           </mat-form-field>
         </div>
       </div>
-      <div class="row">
+      <!--div class="row">
         <div class="col">
           <mat-form-field>
             <mat-label>Date de naissance</mat-label>
@@ -48,10 +48,10 @@
             }
           </mat-form-field>
         </div>
-      </div>
+      </div-->
     </mat-card-content>
   </mat-card>
-  <mat-card class="shipping-card">
+  <!--mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Filiation</mat-card-title>
     </mat-card-header>
@@ -59,16 +59,16 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Prénom père" formControlName="lastName">
-            @if (inscriptionForm.controls['lastName'].hasError('required')) {
+            <input matInput placeholder="Prénom père" formControlName="fatherFirstName">
+            @if (inscriptionForm.controls['fatherFirstName'].hasError('required')) {
               <mat-error>Last name is <strong>required</strong></mat-error>
             }
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Nom père" formControlName="lastName">
-            @if (inscriptionForm.controls['lastName'].hasError('required')) {
+            <input matInput placeholder="Nom père" formControlName="fatherLastName">
+            @if (inscriptionForm.controls['fatherLastName'].hasError('required')) {
               <mat-error>Last name is <strong>required</strong></mat-error>
             }
           </mat-form-field>
@@ -78,16 +78,16 @@
         <div class="col">
           <mat-form-field>
             <mat-label>Date de naissance du père</mat-label>
-            <input matInput [matDatepicker]="picker">
+            <input matInput [matDatepicker]="fatherBirthDayPicker" formControlName="fatherBirthDay">
             <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-datepicker-toggle matIconSuffix [for]="fatherBirthDayPicker"></mat-datepicker-toggle>
+            <mat-datepicker #fatherBirthDayPicker></mat-datepicker>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Numéro de téléphone du père" formControlName="lastName">
-            @if (inscriptionForm.controls['lastName'].hasError('required')) {
+            <input matInput placeholder="Numéro de téléphone du père" formControlName="fatherPhoneNumber">
+            @if (inscriptionForm.controls['fatherPhoneNumber'].hasError('required')) {
               <mat-error>Last name is <strong>required</strong></mat-error>
             }
           </mat-form-field>
@@ -96,16 +96,16 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Prénom de la mère" formControlName="lastName">
-            @if (inscriptionForm.controls['lastName'].hasError('required')) {
+            <input matInput placeholder="Prénom de la mère" formControlName="motherrFirstName">
+            @if (inscriptionForm.controls['motherrFirstName'].hasError('required')) {
               <mat-error>Last name is <strong>required</strong></mat-error>
             }
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Nom de la mère" formControlName="lastName">
-            @if (inscriptionForm.controls['lastName'].hasError('required')) {
+            <input matInput placeholder="Nom de la mère" formControlName="motherLastName">
+            @if (inscriptionForm.controls['motherLastName'].hasError('required')) {
               <mat-error>Last name is <strong>required</strong></mat-error>
             }
           </mat-form-field>
@@ -115,24 +115,24 @@
         <div class="col">
           <mat-form-field>
             <mat-label>Date de naissance de la mère</mat-label>
-            <input matInput [matDatepicker]="picker">
+            <input matInput [matDatepicker]="motherBirthDayPicker" formControlName="motherBirthDay">
             <mat-hint>MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <mat-datepicker-toggle matIconSuffix [for]="motherBirthDayPicker"></mat-datepicker-toggle>
+            <mat-datepicker #motherBirthDayPicker></mat-datepicker>
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Numéro de téléphone de la mère" formControlName="lastName">
-            @if (inscriptionForm.controls['lastName'].hasError('required')) {
+            <input matInput placeholder="Numéro de téléphone de la mère" formControlName="motherPhoneNumber">
+            @if (inscriptionForm.controls['motherPhoneNumber'].hasError('required')) {
               <mat-error>Last name is <strong>required</strong></mat-error>
             }
           </mat-form-field>
         </div>
       </div>
     </mat-card-content>
-  </mat-card>
-  <mat-card class="shipping-card">
+  </mat-card-->
+  <!--mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Adresse</mat-card-title>
     </mat-card-header>
@@ -191,8 +191,8 @@
         </div>
       </div>
     </mat-card-content>
-    <!-- <mat-card-actions>
+    <mat-card-actions>
       <button mat-raised-button color="primary" type="submit">Submit</button>
-    </mat-card-actions> -->
-  </mat-card>
+    </mat-card-actions>
+  </mat-card-->
 </form>

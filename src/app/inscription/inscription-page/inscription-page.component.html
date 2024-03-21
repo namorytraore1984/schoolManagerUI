@@ -1,7 +1,4 @@
-<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-  </button> -->
-  <mat-stepper [linear]="isLinear" #stepper>
+<mat-stepper [linear]="isLinear" #stepper>
     <mat-step>
         <ng-template matStepLabel>Information légale</ng-template>
         <p>
@@ -11,15 +8,16 @@
             <button mat-button matStepperNext>Suivant</button>
         </div>
     </mat-step>
-    <mat-step [stepControl]="firstFormGroup">
-        <form [formGroup]="firstFormGroup">
+    <mat-step [stepControl]="inscripyionForm.inscriptionForm">
+        <!--form [formGroup]="firstFormGroup"-->
             <ng-template matStepLabel>Formulaire d'inscription</ng-template>
-            <app-inscription-form></app-inscription-form>
+            <app-inscription-form #inscripyionForm></app-inscription-form>
             <div>
                 <button mat-button matStepperPrevious>Précédent</button>
                 <button mat-button matStepperNext>Suivant</button>
+                <!--button mat-button matStepperNext [disabled]="!inscripyionForm.inscriptionForm.valid">Suivant</button-->
             </div>
-        </form>
+        <!--/form-->
     </mat-step>
     <mat-step [stepControl]="secondFormGroup" label="Télécharger les documents">
         <form [formGroup]="secondFormGroup">

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -23,8 +23,12 @@ import { InscriptionFormComponent } from '../inscription-form/inscription-form.c
   styleUrl: './inscription-page.component.css'
 })
 export class InscriptionPageComponent {
+
+  @ViewChild("inscripyionForm")
+  inscripyionForm?: InscriptionFormComponent;
+
   firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
+    firstCtrl: [this.inscripyionForm?.inscriptionForm.valid, Validators.requiredTrue],
   });
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required],
@@ -32,4 +36,6 @@ export class InscriptionPageComponent {
   isLinear = true;
 
   constructor(private _formBuilder: FormBuilder) {}
+
+
 }
