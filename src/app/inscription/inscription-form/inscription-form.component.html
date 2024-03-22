@@ -22,7 +22,7 @@
           </mat-form-field>
         </div>
       </div>
-      <!--div class="row">
+      <div class="row">
         <div class="col">
           <mat-form-field>
             <mat-label>Date de naissance</mat-label>
@@ -48,10 +48,10 @@
             }
           </mat-form-field>
         </div>
-      </div-->
+      </div>
     </mat-card-content>
   </mat-card>
-  <!--mat-card class="shipping-card">
+  <mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Filiation</mat-card-title>
     </mat-card-header>
@@ -82,6 +82,9 @@
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="fatherBirthDayPicker"></mat-datepicker-toggle>
             <mat-datepicker #fatherBirthDayPicker></mat-datepicker>
+            @if (inscriptionForm.controls['fatherBirthDay'].hasError('required')) {
+              <mat-error>Champ obligatoire <strong>required</strong></mat-error>
+            }
           </mat-form-field>
         </div>
         <div class="col">
@@ -119,6 +122,9 @@
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="motherBirthDayPicker"></mat-datepicker-toggle>
             <mat-datepicker #motherBirthDayPicker></mat-datepicker>
+            @if (inscriptionForm.controls['motherBirthDay'].hasError('required')) {
+              <mat-error>Champ obligatoire <strong>required</strong></mat-error>
+            }
           </mat-form-field>
         </div>
         <div class="col">
@@ -131,8 +137,8 @@
         </div>
       </div>
     </mat-card-content>
-  </mat-card-->
-  <!--mat-card class="shipping-card">
+  </mat-card>
+  <mat-card class="shipping-card">
     <mat-card-header>
       <mat-card-title>Adresse</mat-card-title>
     </mat-card-header>
@@ -191,8 +197,8 @@
         </div>
       </div>
     </mat-card-content>
-    <mat-card-actions>
+    <!--mat-card-actions>
       <button mat-raised-button color="primary" type="submit">Submit</button>
-    </mat-card-actions>
-  </mat-card-->
+    </mat-card-actions-->
+  </mat-card>
 </form>

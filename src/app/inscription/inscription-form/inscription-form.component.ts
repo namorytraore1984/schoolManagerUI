@@ -40,7 +40,7 @@ export class InscriptionFormComponent implements OnChanges {
   inscriptionForm = this.fb.group({
     firstName: [null, Validators.required],
     lastName: [null, Validators.required],
-    /*birthDay: [null, Validators.required],
+    birthDay: [null, Validators.required],
     genre: [null, Validators.required],
     fatherFirstName: [null, Validators.required],
     fatherLastName: [null, Validators.required],
@@ -49,12 +49,14 @@ export class InscriptionFormComponent implements OnChanges {
     motherrFirstName: [null, Validators.required],
     motherLastName: [null, Validators.required],
     motherPhoneNumber: [null, Validators.required],
+    motherBirthDay: [null, Validators.required],
+    address: [null, Validators.required],
     city: [null, Validators.required],
     state: [null, Validators.required],
     postalCode: [null, Validators.compose([
       Validators.required, Validators.minLength(5), Validators.maxLength(5)])
     ],
-    shipping: ['free', Validators.required]*/
+    shipping: ['free', Validators.required]
   });
 
   genreList = listGenre;

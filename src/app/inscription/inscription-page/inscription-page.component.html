@@ -9,15 +9,12 @@
         </div>
     </mat-step>
     <mat-step [stepControl]="inscripyionForm.inscriptionForm">
-        <!--form [formGroup]="firstFormGroup"-->
-            <ng-template matStepLabel>Formulaire d'inscription</ng-template>
-            <app-inscription-form #inscripyionForm></app-inscription-form>
-            <div>
-                <button mat-button matStepperPrevious>Précédent</button>
-                <button mat-button matStepperNext>Suivant</button>
-                <!--button mat-button matStepperNext [disabled]="!inscripyionForm.inscriptionForm.valid">Suivant</button-->
-            </div>
-        <!--/form-->
+        <ng-template matStepLabel>Formulaire d'inscription</ng-template>
+        <app-inscription-form #inscripyionForm></app-inscription-form>
+        <div>
+            <button mat-button matStepperPrevious>Précédent</button>
+            <button mat-button matStepperNext>Suivant</button>            
+        </div>
     </mat-step>
     <mat-step [stepControl]="secondFormGroup" label="Télécharger les documents">
         <form [formGroup]="secondFormGroup">
