@@ -1,8 +1,33 @@
 {
     "menu" : {
-        "home": "Accueil"
+        "logo-text": "Mon École!!!",
+        "home": "Accueil",
+        "inscription": "Inscription",
+        "student": {
+            "title": "Élève",
+            "add-studen": "Inscrire",
+            "student-list": "Liste des élèves"
+        },
+        "direction": {
+            "back": "Précédent",
+            "next": "Suivant"
+        }
     },
     "inscription": {
-        "desc": "Description du processus d''Inscription."
+        "onglets": {
+            "info-legal": {
+                "title": "Information légale",
+                "desc": "Description du processus d'Inscription."
+            },
+            "form": {
+                "title": "Formulaire d'inscription"
+            },
+            "telecharger-doc": {
+                "title": "Télécharger les documents"
+            },
+            "resume": {
+                "title": "Revoir et soumettre"
+            }
+        }
     }
 }

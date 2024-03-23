@@ -1,8 +1,33 @@
 {
     "menu" : {
-        "home": "Home"
+        "logo-text": "My school!!!",
+        "home": "Home",
+        "inscription": "Add student",
+        "student": {
+            "title": "Student",
+            "add-studen": "Add student",
+            "student-list": "Students list"
+        },
+        "direction": {
+            "back": "Back",
+            "next": "Next"
+        }
     },
     "inscription": {
-        "desc": "Appliication process description"
+        "onglets": {
+            "info-legal": {
+                "title": "Legal information",
+                "desc": "Registration process description."
+            },
+            "form": {
+                "title": "Registration form"
+            },
+            "telecharger-doc": {
+                "title": "Docs download"
+            },
+            "resume": {
+                "title": "Review and submit"
+            }
+        }
     }
 }

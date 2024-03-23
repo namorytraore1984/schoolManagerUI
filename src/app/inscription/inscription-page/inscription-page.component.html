@@ -1,38 +1,39 @@
 <mat-stepper [linear]="isLinear" #stepper>
     <mat-step>
-        <ng-template matStepLabel>Information légale</ng-template>
+        <ng-template matStepLabel>{{"inscription.onglets.info-legal.title" | translate}}</ng-template>
         <p>
-            {{"inscription.desc" | translate}}
+            {{"inscription.onglets.info-legal.desc" | translate}}
         </p>
         <div>
-            <button mat-button matStepperNext>Suivant</button>
+            <button mat-button matStepperNext>{{"menu.direction.next" | translate}}</button>
         </div>
     </mat-step>
     <mat-step [stepControl]="inscripyionForm.inscriptionForm">
-        <ng-template matStepLabel>Formulaire d'inscription</ng-template>
+        <ng-template matStepLabel>{{"inscription.onglets.form.title" | translate}}</ng-template>
         <app-inscription-form #inscripyionForm></app-inscription-form>
         <div>
-            <button mat-button matStepperPrevious>Précédent</button>
-            <button mat-button matStepperNext>Suivant</button>            
+            <button mat-button matStepperPrevious>{{"menu.direction.back" | translate}}</button>
+            <button mat-button matStepperNext>{{"menu.direction.next" | translate}}</button>            
         </div>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Télécharger les documents">
+    <mat-step [stepControl]="secondFormGroup">
+        <ng-template matStepLabel>{{"inscription.onglets.telecharger-doc.title" | translate}}</ng-template>
         <form [formGroup]="secondFormGroup">
             <mat-form-field>
                 <mat-label>Address</mat-label>
                 <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
             </mat-form-field>
             <div>
-                <button mat-button matStepperPrevious>Précédent</button>
-                <button mat-button matStepperNext>Suivant</button>
+                <button mat-button matStepperPrevious>{{"menu.direction.back" | translate}}</button>
+                <button mat-button matStepperNext>{{"menu.direction.next" | translate}}</button>
             </div>
         </form>
     </mat-step>
     <mat-step>
-        <ng-template matStepLabel>Revoir et soumettre</ng-template>
+        <ng-template matStepLabel>{{"inscription.onglets.resume.title" | translate}}</ng-template>
         <p>Resumé de l'isncription</p>
         <div>
-            <button mat-button matStepperPrevious>Précédent</button>
+            <button mat-button matStepperPrevious>{{"menu.direction.back" | translate}}</button>
             <button mat-button (click)="stepper.reset()">Soumettre</button>
         </div>
     </mat-step>
