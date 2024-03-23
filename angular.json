@@ -6,6 +6,12 @@
     "schoolManagerUI": {
       "projectType": "application",
       "schematics": {},
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "fr": "src/assets/i18n/fr.json"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

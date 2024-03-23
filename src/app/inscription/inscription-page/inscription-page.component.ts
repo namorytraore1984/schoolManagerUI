@@ -5,6 +5,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { InscriptionFormComponent } from '../inscription-form/inscription-form.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
@@ -15,6 +16,7 @@ import { InscriptionFormComponent } from '../inscription-form/inscription-form.c
     MatStepperModule,
     FormsModule,
     ReactiveFormsModule,
+    TranslateModule,
     MatFormFieldModule,
     MatInputModule,
     InscriptionFormComponent
