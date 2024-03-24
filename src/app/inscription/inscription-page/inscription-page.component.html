@@ -16,25 +16,24 @@
             <button mat-button matStepperNext>{{"menu.direction.next" | translate}}</button>            
         </div>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup">
+    <mat-step>
         <ng-template matStepLabel>{{"inscription.onglets.telecharger-doc.title" | translate}}</ng-template>
-        <form [formGroup]="secondFormGroup">
-            <mat-form-field>
-                <mat-label>Address</mat-label>
-                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-            </mat-form-field>
-            <div>
-                <button mat-button matStepperPrevious>{{"menu.direction.back" | translate}}</button>
-                <button mat-button matStepperNext>{{"menu.direction.next" | translate}}</button>
-            </div>
-        </form>
+        <p>
+            {{"inscription.onglets.telecharger-doc.desc" | translate}}
+        </p>
+        <div>
+            <button mat-button matStepperPrevious>{{"menu.direction.back" | translate}}</button>
+            <button mat-button matStepperNext>{{"menu.direction.next" | translate}}</button>
+        </div>
     </mat-step>
     <mat-step>
         <ng-template matStepLabel>{{"inscription.onglets.resume.title" | translate}}</ng-template>
         <p>Resumé de l'isncription</p>
+        <div *ngIf="isShowProgressBar"><app-progress-bar></app-progress-bar></div>
         <div>
             <button mat-button matStepperPrevious>{{"menu.direction.back" | translate}}</button>
-            <button mat-button (click)="stepper.reset()">Soumettre</button>
+            <button mat-button (click)="stepper.reset()">{{"menu.direction.reset" | translate}}</button>
+            <button mat-button (click)="submitRegistration()">{{"menu.direction.submit" | translate}}</button>
         </div>
     </mat-step>
 </mat-stepper>

@@ -10,7 +10,9 @@
         },
         "direction": {
             "back": "Back",
-            "next": "Next"
+            "next": "Next",
+            "submit": "Submit",
+            "reset": "Reset"
         }
     },
     "inscription": {
@@ -23,7 +25,8 @@
                 "title": "Registration form"
             },
             "telecharger-doc": {
-                "title": "Docs download"
+                "title": "Docs download",
+                "desc": "Download all the student doc here."
             },
             "resume": {
                 "title": "Review and submit"

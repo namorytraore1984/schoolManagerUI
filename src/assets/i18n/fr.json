@@ -10,7 +10,9 @@
         },
         "direction": {
             "back": "Précédent",
-            "next": "Suivant"
+            "next": "Suivant",
+            "submit": "Soumettre",
+            "reset": "Réinitialiser"
         }
     },
     "inscription": {
@@ -23,7 +25,8 @@
                 "title": "Formulaire d'inscription"
             },
             "telecharger-doc": {
-                "title": "Télécharger les documents"
+                "title": "Télécharger les documents",
+                "desc": "Télécharger tousles documents de l'éléve ici."
             },
             "resume": {
                 "title": "Revoir et soumettre"

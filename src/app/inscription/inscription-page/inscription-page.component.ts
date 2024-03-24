@@ -6,6 +6,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonModule} from '@angular/material/button';
 import { InscriptionFormComponent } from '../inscription-form/inscription-form.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { ProgressBarComponent } from '../../core/components/progress-bar/progress-bar.component';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -19,7 +21,9 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule,
     MatFormFieldModule,
     MatInputModule,
-    InscriptionFormComponent
+    CommonModule,
+    InscriptionFormComponent,
+    ProgressBarComponent
   ],
   templateUrl: './inscription-page.component.html',
   styleUrl: './inscription-page.component.css'
@@ -28,6 +32,8 @@ export class InscriptionPageComponent {
 
   @ViewChild("inscripyionForm")
   inscripyionForm?: InscriptionFormComponent;
+
+  isShowProgressBar = false;
 
   firstFormGroup = this._formBuilder.group({
     firstCtrl: [this.inscripyionForm?.inscriptionForm.valid, Validators.requiredTrue],
@@ -39,5 +45,11 @@ export class InscriptionPageComponent {
 
   constructor(private _formBuilder: FormBuilder) {}
 
+  submitRegistration() {
+    this.isShowProgressBar = true;
+    setTimeout(() => {
+      this.isShowProgressBar=false;
+    }, 4000);
+  }
 
 }

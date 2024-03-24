@@ -39,6 +39,26 @@ export class InscriptionFormComponent implements OnChanges {
   private fb = inject(FormBuilder);
   inscriptionForm = this.fb.group({
     firstName: [null, Validators.required],
+    lastName: [null],
+    birthDay: [null],
+    genre: [null],
+    fatherFirstName: [null],
+    fatherLastName: [null],
+    fatherBirthDay: [null],
+    fatherPhoneNumber: [null],
+    motherrFirstName: [null],
+    motherLastName: [null],
+    motherPhoneNumber: [null],
+    motherBirthDay: [null],
+    address: [null],
+    city: [null],
+    state: [null],
+    postalCode: [null],
+    shipping: ['free']
+  });
+
+  inscriptionForm_new = this.fb.group({
+    firstName: [null, Validators.required],
     lastName: [null, Validators.required],
     birthDay: [null, Validators.required],
     genre: [null, Validators.required],
